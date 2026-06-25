@@ -1,68 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Puter Voice Studio</title>
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html><html><head><meta charset="UTF-8">
 <script src="https://js.puter.com/v2/"></script>
-</head>
-<body>
-<div class="sidebar">
-<h2>Puter Voice Studio</h2>
-
-<label>Voice</label>
-
-<select id="voice">
-
-    <option value="hIreuBly94QFepU63yel" selected>
-        🇦🇺 Scotty (Australian English)
-    </option>
-
-    <option value="21m00Tcm4TlvDq8ikWAM">
-        🇺🇸 Rachel
-    </option>
-
-</select>
-
-<label>Model</label>
-<select id="model">
-<option value="eleven_multilingual_v2">Multilingual V2</option>
-<option value="eleven_flash_v2_5">Flash V2.5</option>
-<option value="eleven_turbo_v2_5">Turbo V2.5</option>
-<option value="eleven_v3">V3</option>
-</select>
-
-<label>Format</label>
-<select id="format">
-<option value="mp3_44100_128">MP3 Standard</option>
-<option value="mp3_44100_192">MP3 HQ</option>
-</select>
-
-<button id="generate">Generate</button>
-
-<h3>History</h3>
-<div id="history"></div>
-</div>
-
-<div class="main">
-<h1>Puter ElevenLabs Clone</h1>
-
-<textarea id="text" placeholder="Enter text..."></textarea>
-<div id="count">0 characters</div>
-
-<div class="batch">
-<h3>Batch Mode</h3>
-<p>Separate scripts with ---</p>
-<textarea id="batchText" placeholder="Script 1&#10;---&#10;Script 2"></textarea>
-<button id="batchGenerate">Generate Batch</button>
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+<link rel="stylesheet" href="style.css"></head><body>
+<h1>Puter Voice Studio</h1>
+<select id="voice"><option value="hIreuBly94QFepU63yel" selected>Scotty (AU)</option></select>
+<textarea id="text" style="width:100%;height:300px"></textarea>
+<button id="generate">Generate Long TTS</button>
 <div id="progress"></div>
-</div>
-
-<audio id="player" controls></audio>
-<button id="download">Download Current Audio</button>
-</div>
-
-<script src="app.js"></script>
-</body>
-</html>
+<audio id="player" controls style="width:100%"></audio>
+<a id="downloadLink" style="display:none">Download</a>
+<script src="app.js"></script></body></html>
